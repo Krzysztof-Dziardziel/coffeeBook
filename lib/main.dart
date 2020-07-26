@@ -1,6 +1,5 @@
 import 'package:coffeebook/settings/settings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'coffeeCarousel/coffeeCarousel.dart';
 
 void main() => runApp(MyApp());
