@@ -22,13 +22,14 @@ class _NewBrewState extends State<NewBrew> {
               backgroundColor: Colors.brown,
               child: Icon(Icons.add),
               onPressed: () {
-                showCupertinoDialog(
+                showDialog(
                   context: context,
-                  builder: (BuildContext context) => CupertinoAlertDialog(
+                  builder: (BuildContext context) => AlertDialog(
                     title: const Text('Not done yet :('),
                     actions: <Widget>[
-                      CupertinoDialogAction(
+                      MaterialButton(
                         child: const Text('K. Heading back to work'),
+                        color: Colors.blue,
                         onPressed: () {
                           Navigator.pop(context, 'ok');
                         },
