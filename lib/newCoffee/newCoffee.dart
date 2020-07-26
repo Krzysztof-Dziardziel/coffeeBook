@@ -1,13 +1,10 @@
-import 'package:coffeebook/newCoffee/countrySelector.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-
+import 'package:coffeebook/newCoffee/countrySelector.dart';
 import 'package:coffeebook/models.dart';
 import 'package:coffeebook/database/databaseHelpers.dart';
-
 import '../main.dart';
 
 class NewCoffee extends StatefulWidget {

@@ -1,6 +1,5 @@
 import 'package:coffeebook/newBrew/parameterSlider.dart';
 import 'package:flutter/material.dart';
-
 import 'aromas.dart';
 
 class NewBrew extends StatefulWidget {
