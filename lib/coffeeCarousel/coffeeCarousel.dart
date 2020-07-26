@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:coffeebook/newCoffee/newCoffee.dart';
 import 'package:flutter/material.dart';
-
 import '../database/databaseHelpers.dart';
 import '../models.dart';
 import 'coffeeCard.dart';
