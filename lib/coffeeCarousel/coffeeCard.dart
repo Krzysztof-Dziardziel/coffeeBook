@@ -1,7 +1,6 @@
 import 'package:coffeebook/brews/brews.dart';
 import 'package:coffeebook/newCoffee/newCoffee.dart';
 import 'package:coffeebook/coffeeCarousel/daysSinceRoast.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CoffeeCard extends StatelessWidget {
