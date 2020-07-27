@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 //POSSIBLE ITEMS:
 List<String> items = [
@@ -62,9 +63,23 @@ class _CoffeeToolState extends State<CoffeeTool> {
         child: Container(
           height: btnWidth,
           width: btnWidth,
-          child: Text(
-            widget.name,
-            style: TextStyle(fontSize: 20),
+          child: Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  'assets/tools/${widget.name.toLowerCase()}.svg',
+                  color: widget.isAvailable ? Colors.white : Colors.brown,
+                ),
+                Text(
+                  widget.name,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: widget.isAvailable ? Colors.white : Colors.brown,
+                  ),
+                ),
+              ],
+            ),
           ),
           alignment: Alignment.center,
         ),
