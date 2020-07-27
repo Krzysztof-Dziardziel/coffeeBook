@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'CoffeeTool.dart';
+import 'coffeeTool.dart';
+import 'newTool.dart';
 
 //POSSIBLE ITEMS:
 List<CoffeeTool> items = [
@@ -11,12 +12,7 @@ List<CoffeeTool> items = [
   CoffeeTool(name: 'Frenchpress'),
 ];
 
-class YourSet extends StatefulWidget {
-  @override
-  _YourSetState createState() => _YourSetState();
-}
-
-class _YourSetState extends State<YourSet> {
+class YourSet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +25,7 @@ class _YourSetState extends State<YourSet> {
               runAlignment: WrapAlignment.center,
               children: <Widget>[
                 ...items,
+                NewTool(),
               ],
             ),
           ),
