@@ -1,5 +1,6 @@
 import 'package:coffeebook/settings/settings.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'coffeeCarousel/coffeeCarousel.dart';
 
 void main() => runApp(MyApp());
@@ -22,12 +23,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.brown,
-        fontFamily: 'Roboto',
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.brown,
-        fontFamily: 'Roboto',
       ),
       home: Scaffold(
         body: _pages[_currentPage],

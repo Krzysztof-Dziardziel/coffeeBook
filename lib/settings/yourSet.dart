@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'coffeeTool.dart';
 import 'newTool.dart';
 
-//POSSIBLE ITEMS:
 List<CoffeeTool> items = [
   CoffeeTool(name: 'V60'),
   CoffeeTool(name: 'Aeropress'),

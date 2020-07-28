@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CoffeeTool extends StatefulWidget {
-  CoffeeTool({@required this.name, this.isAvailable = false});
+  CoffeeTool(
+      {@required this.name, this.isAvailable = false, this.isText = true});
   final String name;
   bool isAvailable;
+  bool isText;
   @override
   _CoffeeToolState createState() => _CoffeeToolState();
 }
@@ -20,27 +22,30 @@ class _CoffeeToolState extends State<CoffeeTool> {
         child: Container(
           height: btnWidth,
           width: btnWidth,
-          child: Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  'assets/tools/${widget.name.toLowerCase()}.svg',
-                  color: widget.isAvailable ? Colors.white : Colors.brown,
-                ),
-                Text(
-                  widget.name,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: widget.isAvailable ? Colors.white : Colors.brown,
-                  ),
-                ),
-              ],
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                'assets/tools/${widget.name.toLowerCase()}.svg',
+                color: widget.isAvailable ? Colors.white : Colors.brown,
+              ),
+              widget.isText
+                  ? Text(
+                      widget.name,
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: widget.isAvailable ? Colors.white : Colors.brown,
+                      ),
+                    )
+                  : Container(),
+            ],
           ),
           alignment: Alignment.center,
         ),
         color: widget.isAvailable ? Colors.brown : Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
         onPressed: () {
           setState(
             () {
